@@ -1,0 +1,30 @@
+{
+  "name": "react-load-mask",
+  "version": "0.0.9",
+  "description": "React load mask",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "make"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/radubrehar/react-load-mask.git"
+  },
+  "keywords": [
+    "load",
+    "mask",
+    "loading",
+    "loader",
+    "load-mask",
+    "mask",
+    "progress",
+    "react-component",
+    "react"
+  ],
+  "author": "Radu Brehar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/radubrehar/react-load-mask/issues"
+  },
+  "homepage": "https://github.com/radubrehar/react-load-mask"
+}

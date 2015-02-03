@@ -29,6 +29,7 @@ $loadmask-opacity = 0.5
         for index in 0..11
             .loadbar-{index+1}
                 transform rotate((index*30)deg) translate(0, -142%)
+                -webkit-transform rotate((index*30)deg) translate(0, -142%)
                 -webkit-animation-delay -(index*1s - round(index/12, 4))
                 -moz-animation-delay -(index*1s - round(index/12, 4))
                 -ms-animation-delay -(index*1s - round(index/12, 4))

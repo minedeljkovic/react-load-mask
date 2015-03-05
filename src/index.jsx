@@ -1,4 +1,4 @@
-'use strict';
+'use strict'
 
 var React  = require('react')
 var assign = require('object-assign')
@@ -11,6 +11,7 @@ module.exports = React.createClass({
     getDefaultProps: function(){
 
         return {
+            visible: false,
             visibleDisplayValue: 'block',
             defaultStyle: {
                 position: 'absolute',
@@ -26,25 +27,24 @@ module.exports = React.createClass({
     render: function(){
         var props = assign({}, this.props)
 
-        this.prepareStyle(props)
+        props.style = this.prepareStyle(props)
 
         props.className = props.className || ''
         props.className += ' loadmask'
 
-        return React.DOM.div(props, <Loader size={props.size}/>)
+        return <div {...props}>
+            <Loader size={props.size}/>
+        </div>
     },
 
     prepareStyle: function(props){
 
-        var style = {}
-
-        assign(style, props.defaultStyle)
-        assign(style, props.style)
+        var style = assign({}, props.defaultStyle, props.style)
 
         style.display = props.visible?
                         props.visibleDisplayValue:
                         'none'
 
-        props.style = style
+        return style
     }
 })

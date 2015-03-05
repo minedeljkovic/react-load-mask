@@ -54,7 +54,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/** @jsx React.DOM */'use strict';
+	/** @jsx React.DOM */'use strict'
 
 	var React  = __webpack_require__(1)
 	var assign = __webpack_require__(3)
@@ -67,6 +67,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    getDefaultProps: function(){
 
 	        return {
+	            visible: false,
 	            visibleDisplayValue: 'block',
 	            defaultStyle: {
 	                position: 'absolute',
@@ -82,26 +83,25 @@ return /******/ (function(modules) { // webpackBootstrap
 	    render: function(){
 	        var props = assign({}, this.props)
 
-	        this.prepareStyle(props)
+	        props.style = this.prepareStyle(props)
 
 	        props.className = props.className || ''
 	        props.className += ' loadmask'
 
-	        return React.DOM.div(props, React.createElement(Loader, {size: props.size}))
+	        return React.createElement("div", React.__spread({},  props), 
+	            React.createElement(Loader, {size: props.size})
+	        )
 	    },
 
 	    prepareStyle: function(props){
 
-	        var style = {}
-
-	        assign(style, props.defaultStyle)
-	        assign(style, props.style)
+	        var style = assign({}, props.defaultStyle, props.style)
 
 	        style.display = props.visible?
 	                        props.visibleDisplayValue:
 	                        'none'
 
-	        props.style = style
+	        return style
 	    }
 	})
 

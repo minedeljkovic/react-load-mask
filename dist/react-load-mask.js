@@ -70,6 +70,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            visible: false,
 	            visibleDisplayValue: 'block',
 	            defaultStyle: {
+	                background: 'rgba(128, 128, 128, 0.5)',
 	                position: 'absolute',
 	                width   : '100%',
 	                height  : '100%',

@@ -25,6 +25,6 @@ export default class LoadMask extends React.Component {
 }
 
 LoadMask.defaultProps = {
-  visibile: false,
+  visible: false,
   theme: 'default'
 }

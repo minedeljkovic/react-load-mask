@@ -19,7 +19,7 @@ $ npm i react-load-mask --save
 
 ## Usage
 
-```jsx
+```javascript 
 import 'react-load-mask/index.css'
 import LoadMask from 'react-load-mask'
 
